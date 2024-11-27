@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gimnasio FitLife</title>
+    <link rel="stylesheet" href="styles.css">
+    <style> 
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 0;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #f4a261;
+}
+
+
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    color: #444;
+}
+
+/* Sección de planes */
+.section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap; /* Asegura que sea responsivo */
+}
+
+/* Estilo para cada plan */
+.plan {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    flex: 1 1 calc(33.333% - 20px); /* Ocupa un tercio del ancho con espacio entre tarjetas */
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.plan h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.plan p {
+    line-height: 1.5;
+    margin: 10px 0;
+}
+
+.plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.plan ul li {
+    margin: 5px 0;
+}
+
+.price {
+    font-size: 1.5em;
+    color: #2c3e50;
+    margin: 15px 0;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #5a67d8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #434190;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .plans {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plan {
+        flex: 1 1 100%; /* Toma todo el ancho en pantallas pequeñas */
+    }
+}
+
+ul li {
+    background-color: #ddd;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #333;
+    color: white;
+}
+
+td {
+    text-align: center;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+table {
+            width: 90%;
+            max-width: 1000px;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        th, td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #333;
+            color: #fff;
+        }
+        td {
+            color: #555;
+        }
+        .class-type {
+            font-weight: bold;
+        }
+        .yoga {
+            background-color: #ffe0b2;
+        }
+        .pilates {
+            background-color: #dcedc8;
+        }
+        .strength {
+            background-color: #b3e5fc;
+        }
+        .cardio {
+            background-color: #f8bbd0;
+        }
+        .section {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .plan {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .plan p {
+            font-size: 1em;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .plan ul li {
+            font-size: 1em;
+            color: #666;
+            padding: 5px 0;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #4CAF50;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    /* Footer general */
+.footer {
+    .footer {
+    background-color: rgba(44, 62, 80, 0.8); /* Color oscuro con 80% de opacidad */
+    color: #ecf0f1; /* Color del texto */
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+    color: #ecf0f1;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.footer-info h3 {
+    margin: 0;
+    color: #bdc3c7;
+    font-size: 18px;
+}
+
+.footer-info p {
+    margin: 5px 0 0;
+    font-size: 13px;
+}
+
+/* Enlaces rápidos */
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.footer-links ul li {
+    margin: 0;
+}
+
+.footer-links ul li a {
+    color: #ecf0f1;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #e74c3c;
+}
+
+/* Redes sociales */
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social .social-icon {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    
+    color: #fff;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+
+    
+
+.footer-social .social-icon img {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+
+/* Footer inferior */
+.footer-bottom {
+    text-align: center;
+    padding: 5px 0;
+    background-color: #333;
+    color: #bdc3c7;
+    font-size: 12px;
+}
+.footer {
+    position: relative;
+    bottom: 0;
+}
+
+        
+    </style>
+</head>
+
+<body>
+    
+    <header>
+        <nav>
+            <ul>
+            
+
+                        <ul>
+                        
+                            <li><a href="#planes"> Planes</a></li>
+                            <li><a href="#schedule">Horarios de Clases</a></li>
+                <li><a href="entrenadores.html">Entrenadores</a></li>
+                <li><a href="inscripcion.html">Inscripción</a></li> 
+                            
+                        </ul>
+                    </nav>
+                    
+                </header>
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="section" id="planes">
+        <h2>Planes de Entrenamiento</h2>
+        <div class="plans">
+            
+            <!-- Plan Básico -->
+            <div class="plan">
+                <h3>Plan Básico</h3>
+                <p>Ideal para principiantes que buscan mejorar su condición física general.</p>
+                <ul>
+                    <li>Acceso al gimnasio</li>
+                    <li>Rutina personalizada</li>
+                    <li>Asesoría mensual</li>
+                </ul>
+                <p class="price">$30 USD/mes</p>
+                <a href="#" class="button">Suscribirse</a>
+            </div>
+            
+            <!-- Plan Intermedio -->
+            <div class="plan">
+                <h3>Plan Intermedio</h3>
+                <p>Perfecto para quienes desean intensificar su entrenamiento.</p>
+                <ul>
+                    <li>Acceso completo a instalaciones</li>
+                    <li>Rutinas avanzadas</li>
+                    <li>Asesoría quincenal</li>
+                    <li>Clases grupales</li>
+                </ul>
+                <p class="price">$50 USD/mes</p>
+                <a href="#" class="button">Suscribirse</a>
+            </div>
+            
+            <!-- Plan Avanzado -->
+            <div class="plan">
+                <h3>Plan Avanzado</h3>
+                <p>Para quienes buscan un entrenamiento personalizado y profesional.</p>
+                <ul>
+                    <li>Acceso VIP a todas las instalaciones</li>
+                    <li>Entrenador personal</li>
+                    <li>Clases ilimitadas</li>
+                    <li>Evaluación mensual</li>
+                </ul>
+                <p class="price">$80 USD/mes</p>
+                <a href="#" class="button">Suscribirse</a>
+            </div>
+            
+        </div>
+    </section>
+
+    <section id="schedule">
+        <h2 class="section-title">Horarios de Clases</h2>
+        <div class="schedule-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00 - 09:00</td>
+                        <td class="yoga">Yoga</td>
+                        <td class="strength">Entrenamiento de Fuerza</td>
+                        <td class="yoga">Yoga</td>
+                        <td class="strength">Entrenamiento de Fuerza</td>
+                        <td class="yoga">Yoga</td>
+                        <td class="cardio">Cardio</td>
+                    </tr>
+                    <tr>
+                        <td>10:00 - 11:00</td>
+                        <td class="pilates">Pilates</td>
+                        <td class="cardio">Cardio</td>
+                        <td class="pilates">Pilates</td>
+                        <td class="cardio">Cardio</td>
+                        <td class="pilates">Pilates</td>
+                        <td class="strength">Entrenamiento de Fuerza</td>
+                    </tr>
+                    <tr>
+                        <td>18:00 - 19:00</td>
+                        <td class="strength">Entrenamiento de Fuerza</td>
+                        <td class="yoga">Yoga</td>
+                        <td class="strength">Entrenamiento de Fuerza</td>
+                        <td class="yoga">Yoga</td>
+                        <td class="strength">Entrenamiento de Fuerza</td>
+                        <td class="pilates">Pilates</td>
+                    </tr>
+                    <tr>
+                        <td>19:00 - 20:00</td>
+                        <td class="cardio">Cardio</td>
+                        <td class="pilates">Pilates</td>
+                        <td class="cardio">Cardio</td>
+                        <td class="pilates">Pilates</td>
+                        <td class="cardio">Cardio</td>
+                        <td class="yoga">Yoga</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Información del gimnasio -->
+            <div class="footer-info">
+                <h3>FitLife</h3>
+                <p>Av. Siempre Viva 123, Mar del Plata</p>
+            </div>
+    
+            
+    
+            <!-- Redes sociales -->
+           
+                <div class="footer-social">
+                    <a href="#" class="social-icon">
+                        <img src="img/facebook.png" alt="Facebook">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="img/instagram.png" alt="Instagram">
+                    </a>
+                    <a href="#" class="social-icon">
+                        <img src="img/logotipos.png" alt="Twitter">
+                    </a>
+                </div>
+                
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 FitLife. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    
+    
+
+</body>
+</html>    
+
+    
+   
+
+   
+   
+   
+    

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planes de Entrenamiento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .section {
+            background-color: #fff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section h2 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 20px;
+        }
+
+        .plans {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .plan {
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .plan h3 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        .plan p {
+            font-size: 1em;
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .plan ul {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .plan ul li {
+            font-size: 1em;
+            color: #666;
+            padding: 5px 0;
+        }
+
+        .price {
+            font-size: 1.5em;
+            color: #4CAF50;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<section class="section" id="planes">
+    <h2>Planes de Entrenamiento</h2>
+    <div class="plans">
+        
+        <!-- Plan Básico -->
+        <div class="plan">
+            <h3>Plan Básico</h3>
+            <p>Ideal para principiantes que buscan mejorar su condición física general.</p>
+            <ul>
+                <li>Acceso al gimnasio</li>
+                <li>Rutina personalizada</li>
+                <li>Asesoría mensual</li>
+            </ul>
+            <p class="price">$30 USD/mes</p>
+            <a href="#" class="button">Suscribirse</a>
+        </div>
+        
+        <!-- Plan Intermedio -->
+        <div class="plan">
+            <h3>Plan Intermedio</h3>
+            <p>Perfecto para quienes desean intensificar su entrenamiento.</p>
+            <ul>
+                <li>Acceso completo a instalaciones</li>
+                <li>Rutinas avanzadas</li>
+                <li>Asesoría quincenal</li>
+                <li>Clases grupales</li>
+            </ul>
+            <p class="price">$50 USD/mes</p>
+            <a href="#" class="button">Suscribirse</a>
+        </div>
+        
+        <!-- Plan Avanzado -->
+        <div class="plan">
+            <h3>Plan Avanzado</h3>
+            <p>Para quienes buscan un entrenamiento personalizado y profesional.</p>
+            <ul>
+                <li>Acceso VIP a todas las instalaciones</li>
+                <li>Entrenador personal</li>
+                <li>Clases ilimitadas</li>
+                <li>Evaluación mensual</li>
+            </ul>
+            <p class="price">$80 USD/mes</p>
+            <a href="#" class="button">Suscribirse</a>
+        </div>
+        
+    </div>
+</section>
+
+</body>
+</html>
